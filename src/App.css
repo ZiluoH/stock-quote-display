@@ -28,6 +28,56 @@
   color: #61dafb;
 }
 
+.stock_detail_table{
+  margin: auto;
+  border-collapse: collapse;
+}
+
+.stock_detail_table th,
+.stock_detail_table td{
+  box-sizing: border-box;
+  width: 120px;
+  padding: 15px 0;
+  border: 1px solid black;
+}
+
+.stock_detail_table_head{
+  background-color: #9E9E9E;
+  color: white;
+}
+
+.stock_detail_price{
+  background-color: #E6E6E6;
+}
+
+.stock_form{
+  margin-top: 130px;
+}
+
+.stock_ticker_label{
+  font-size: 22px;
+}
+
+.stock_input{
+  margin: 0 18px;
+  text-transform: uppercase;
+}
+
+.submit_btn{
+  background-color: #4796EC;
+  font-size: 15px;
+  padding: 5px 25px;
+  border-radius: 10px;
+  border: 0;
+  box-shadow: none;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.submit_btn:hover{
+  cursor: pointer;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

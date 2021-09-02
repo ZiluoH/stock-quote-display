@@ -1,25 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { actionCreators } from './state/index'
+import StockForm from './components/StockForm';
+import StockDetail from './components/StockDetail';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const state = useSelector((state) => state.stock);
+	const dispatch = useDispatch();
+	const { loadStock } = bindActionCreators(
+		actionCreators,
+		dispatch
+	);
+    
+	return (
+		<div className='App'>
+			<StockForm loadStock={loadStock}/>
+			<StockDetail stockData = {state}/>
+		</div>
+	);
 }
 
 export default App;
