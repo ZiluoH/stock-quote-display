@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 
-function StockForm({loadStock}) {
-    const [ticker, setTicker] = useState('');
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        loadStock(ticker);
-    }
+function StockForm({ loadStock }) {
+	const [ticker, setTicker] = useState('');
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		loadStock(ticker);
+	};
 
-    return (
+	return (
 		<form onSubmit={handleSubmit} className='stock_form'>
 			<label className='stock_ticker_label'>Enter a Stock Ticker</label>
 			<input
